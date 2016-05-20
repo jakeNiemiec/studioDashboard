@@ -1,15 +1,20 @@
-import {Component} from 'angular2/core';
+import {Component} from "angular2/core";
 import {
-    ROUTER_DIRECTIVES, RouteConfig, Router, OnActivate, ComponentInstruction, CanReuse,
-    OnReuse, OnDeactivate
-} from 'angular2/router';
+    ROUTER_DIRECTIVES,
+    RouteConfig,
+    Router,
+    OnActivate,
+    ComponentInstruction,
+    CanReuse,
+    OnReuse,
+    OnDeactivate,
+    RouterLink
+} from "angular2/router";
 import {HTTP_PROVIDERS} from "angular2/http";
-import {RouterLink, RouteParams} from 'angular2/router';
 import {Menu} from "../sidemenu/Menu";
 import {MenuItem} from "../sidemenu/MenuItem";
-import {CommBroker} from "../../services/CommBroker";
+import {CommBroker, IMessage} from "../../services/CommBroker";
 import {Consts} from "../../../src/Conts";
-import {IMessage} from "../../services/CommBroker";
 import {Sliderpanel} from "../sliderpanel/Sliderpanel";
 import {Tabs} from "../tabs/tabs";
 import {Tab} from "../tabs/tab";
@@ -20,6 +25,7 @@ import {Privileges} from "./privileges/Privileges";
 import {Whitelabel} from "./whitelabel/Whitelabel";
 import {Apps} from "./apps/Apps";
 import {Account} from "./account/Account";
+import {Orders} from "./orders/Orders";
 
 @RouteConfig([
     {path: '/Dashboard', component: Dashboard, as: 'Dashboard', useAsDefault: true},
@@ -28,6 +34,7 @@ import {Account} from "./account/Account";
     {path: '/White label', component: Whitelabel, as: 'White label'},
     {path: '/Apps', component: Apps, as: 'Apps'},
     {path: '/Account', component: Account, as: 'Account'},
+    {path: '/Orders', component: Orders, as: 'Orders'},
     {path: '/Logout', component: Logout, as: 'Logout'}
 ])
 
@@ -42,7 +49,7 @@ import {Account} from "./account/Account";
 @Component({
     providers: [HTTP_PROVIDERS],
     templateUrl: '/src/comps/app1/App1.html',
-    directives: [ROUTER_DIRECTIVES, RouterLink, Menu, MenuItem, Sliderpanel, Account, Whitelabel, Apps, Privileges, Dashboard, Logout, Tabs, Tab]
+    directives: [ROUTER_DIRECTIVES, RouterLink, Menu, MenuItem, Sliderpanel, Account, Whitelabel, Apps, Privileges, Dashboard, Logout, Orders, Tabs, Tab]
 })
 export class App1 implements OnActivate, CanReuse, OnReuse, OnDeactivate {
     private routerActive:boolean;
