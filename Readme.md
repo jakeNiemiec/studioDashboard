@@ -60,7 +60,7 @@ Installation:
 ```
 git clone https://github.com/born2net/studioDashboard.git
 cd studioDashboard
-npm install jspm -g
+npm install jspm@beta -g
 npm install
 ```
 
