@@ -17,8 +17,8 @@ import {List} from 'immutable';
 import {PrivelegesModel} from "../../../reseller/PrivelegesModel";
 import {Samplelist} from "./Samplelist";
 import {SampleModel} from "../../../business/SampleModel";
-const bootbox = require('bootbox');
-const _ = require('underscore');
+import * as bootbox from 'bootbox';
+import * as _ from 'lodash'
 
 @Component({
     selector: 'Users',

@@ -19,9 +19,9 @@ import {
 import {StationModel} from "./StationModel";
 import {CommBroker} from "../services/CommBroker";
 import {Consts} from "../Conts";
-const _ = require('underscore');
-const bootbox = require('bootbox');
-
+import * as _ from 'lodash'
+import * as bootbox from 'bootbox';
+import * as xml2js from 'xml2js'
 
 export const RECEIVE_STATIONS = 'RECEIVE_STATIONS';
 export const RECEIVE_STATIONS_GEO = 'RECEIVE_STATIONS_GEO';
@@ -32,7 +32,8 @@ export class StationsAction extends Actions {
 
     constructor(private appStore:AppStore, private _http:Http, private jsonp:Jsonp, private commBroker:CommBroker) {
         super(appStore);
-        this.m_parseString = require('xml2js').parseString;
+        //this.m_parseString = require('xml2js').parseString;
+        this.m_parseString = xml2js.parseString;
         // this.listenFetchBusinessUser();
     }
 

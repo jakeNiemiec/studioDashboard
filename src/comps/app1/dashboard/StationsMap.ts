@@ -16,9 +16,12 @@
 import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from 'angular2/core';
 import {Ng2Highmaps} from '../../ng2-highcharts/ng2-highcharts';
 import {StationModel} from "../../../stations/StationModel";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
-window['Highmaps'] = require('highcharts/modules/map')(Highcharts);
+// window['Highmaps'] = require('highcharts/modules/map')(Highcharts);
+import * as Ng2Highcharts from 'highcharts/modules/map';
+var hc:any = Ng2Highcharts;
+hc(Highcharts);
 
 @Component({
     selector: 'stationsMap',

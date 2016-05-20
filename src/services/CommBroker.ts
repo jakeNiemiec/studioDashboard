@@ -5,7 +5,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/share';
 import {Subject} from "rxjs/Subject";
-const _ = require('underscore');
+import * as _ from 'lodash'
 /**
 
  CommBroker is a React type Mediator injectable service provider

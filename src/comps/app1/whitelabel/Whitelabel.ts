@@ -13,8 +13,8 @@ import {BlurForwarder} from "../../blurforwarder/BlurForwarder";
 import {Loading} from "../../loading/Loading";
 import {Lib} from "../../../Lib";
 import {ImgLoader} from "../../imgloader/ImgLoader";
-const _ = require('underscore');
-const bootbox = require('bootbox');
+import * as _ from 'lodash'
+import * as bootbox from 'bootbox';
 
 @Component({
     selector: 'whitelabel',

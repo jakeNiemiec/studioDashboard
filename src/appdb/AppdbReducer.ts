@@ -2,7 +2,7 @@ import {Map} from 'immutable';
 
 import * as AppdbAction from "../appdb/AppdbAction";
 import * as StationsAction from "../stations/StationsAction";
-const Immutable = require('immutable');
+import * as Immutable from 'immutable'
 const baseUrl = 'https://galaxy.signage.me/WebService/ResellerService.ashx';
 
 export default function appdb(state:Map<string, any> = Map<string, any>({}), action:any):Map<string, any> {

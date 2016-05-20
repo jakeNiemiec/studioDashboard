@@ -22,9 +22,10 @@ import {
     RequestOptionsArgs
 } from 'angular2/http'
 import {CreditService} from "../services/CreditService";
-const Immutable = require('immutable');
-const bootbox = require('bootbox');
-const _ = require('underscore');
+import * as Immutable from 'immutable'
+import * as bootbox from 'bootbox';
+import * as _ from 'lodash'
+import * as xml2js from 'xml2js'
 
 export const RECEIVE_PRIVILEGES = 'RECEIVE_PRIVILEGES';
 export const RECEIVE_PRIVILEGES_SYSTEM = 'RECEIVE_PRIVILEGES_SYSTEM';
@@ -47,7 +48,8 @@ export class ResellerAction extends Actions {
 
     constructor(private appStore:AppStore, private _http:Http, private jsonp:Jsonp, private creditService:CreditService) {
         super(appStore);
-        this.m_parseString = require('xml2js').parseString;
+        // this.m_parseString = require('xml2js').parseString;
+        this.m_parseString = xml2js.parseString;
     }
 
     private m_parseString;

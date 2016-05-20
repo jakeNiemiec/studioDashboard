@@ -15,8 +15,8 @@ import {SimpleGridRecord} from "../../simplegrid/SimpleGridRecord";
 import {Lib} from "../../../Lib";
 import {PrivelegesModel} from "../../../reseller/PrivelegesModel";
 import {MODAL_DIRECTIVES, ModalResult} from "../../ng2-bs3-modal/ng2-bs3-modal";
-let _ = require('underscore');
-const bootbox = require('bootbox');
+import * as _ from 'lodash'
+import * as bootbox from 'bootbox';
 
 @Component({
     selector: 'UsersDetails',

@@ -8,8 +8,9 @@ import {List, Map} from 'immutable';
 import {LoggerMiddleware} from "angular2-redux-util";
 import {BusinessUser} from "./business/BusinessUser";
 import {PrivelegesModel} from "./reseller/PrivelegesModel";
-var Immutable = require('immutable');
-const _ = require('underscore');
+import * as Immutable from 'immutable'
+import * as _ from 'lodash'
+import * as xml2js from 'xml2js'
 
 @Injectable()
 export class Lib {
@@ -82,7 +83,7 @@ export class Lib {
 
     static MapOfIndex(map:Map<string,any>, index:number, position:"first" | "last"):string {
         var mapJs = map.toJS();
-        var mapJsPairs = _.pairs(mapJs);
+        var mapJsPairs = _.toPairs(mapJs);
         var offset = position == 'first' ? 0 : 1;
         if (mapJsPairs[index] == undefined)
             return "0"
@@ -105,7 +106,8 @@ export class Lib {
      * @constructor
      */
     static PrivilegesXmlTemplate(defaultValues:boolean, selPrivId:string, appStore:AppStore = null, callBack:(err, result)=>any) {
-        const parseString = require('xml2js').parseString;
+        // const parseString = require('xml2js').parseString;
+        const parseString = xml2js.parseString;
 
         var getAttributeGroup = (tableName:string, attribute:string) => {
             if (_.isNull(appStore) || defaultValues)
@@ -338,7 +340,8 @@ export class Lib {
     }
 
     static AppsXmlTemplate(callBack:(err, result)=>any) {
-        const parseString = require('xml2js').parseString;
+        // const parseString = require('xml2js').parseString;
+        const parseString = xml2js.parseString;
         var xmlData = `
                 <Apps>
                   <App id="10145" appName="Webkit" helpName="" uninstallable="1" hidden="0" price="0">

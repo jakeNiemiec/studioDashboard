@@ -21,7 +21,7 @@
 ///<reference path="../typings/browser/ambient/redux-thunk/redux-thunk.d.ts" />
 ///<reference path="../typings/browser/ambient/reselect/reselect.d.ts" />
 ///<reference path="../typings/bootbox/bootbox.d.ts" />
-///<reference path="../typings/lodash/lodash.d.ts" />
+///<reference path="../typings/modules/lodash/index.d.ts" />
 ///<reference path="../typings/moment/moment-node.d.ts" />
 ///<reference path='../node_modules/immutable/dist/Immutable.d.ts'/>
 
@@ -47,7 +47,24 @@ interface String {
     repeat(count:number): string;
 }
 
+declare module 'highcharts/highstock' {
+    var Ng2Highcharts:any
+}
 
+declare module 'highcharts/modules/map' {
+
+}
+
+declare module 'highcharts' {
+}
+
+declare module 'xml2js' {
+    var parseString;
+}
+
+declare module 'platform' {
+    var name;
+}
 
 declare var watch:any;
 

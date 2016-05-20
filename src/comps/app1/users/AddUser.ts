@@ -9,7 +9,7 @@ import {AppStore} from "angular2-redux-util/dist/index";
 import {BusinessAction} from "../../../business/BusinessAction";
 import {PrivelegesModel} from "../../../reseller/PrivelegesModel";
 import {ModalComponent} from "../../ng2-bs3-modal/components/modal";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 @Component({
     selector: 'addUser',
@@ -48,7 +48,7 @@ export class AddUser {
         this.userName = this.notesForm.controls['userName'];
     }
 
-    private accessKeysArr = _.times(8, _.uniqueId);
+    private accessKeysArr:any = _.times(8, _.uniqueId as any);
     private accessKeys:Array<boolean> = _.times(8, ()=>false);
 
     @Input()

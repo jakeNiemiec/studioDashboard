@@ -7,7 +7,7 @@ import {BusinessAction} from "../../business/BusinessAction";
 import Map = Immutable.Map;
 import {LocalStorage} from "../../services/LocalStorage";
 import {AuthService, FlagsAuth} from "../../services/AuthService";
-var bootbox = require('bootbox');
+import * as bootbox from 'bootbox';
 
 @Injectable()
 @Component({

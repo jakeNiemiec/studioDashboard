@@ -1,6 +1,6 @@
 import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy, OnChanges, SimpleChange} from 'angular2/core'
 import {StationModel} from "../../../stations/StationModel";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 @Component({
     selector: 'stationDetails',

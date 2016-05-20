@@ -6,7 +6,7 @@ import {Lib} from "../Lib";
 import {AppModel} from "./AppModel";
 import {WhitelabelModel} from "./WhitelabelModel";
 import {AccountModel} from "./AccountModel";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 export function reseller(state:Map<string,any> = Map<string,any>(), action:any):Map<string,any> {
 

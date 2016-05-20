@@ -1,7 +1,7 @@
 import {Component} from "angular2/core";
 import {AppStore} from "angular2-redux-util";
 import {LocalStorage} from "../../services/LocalStorage";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 @Component({
     selector: 'Logout',

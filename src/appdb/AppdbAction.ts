@@ -7,6 +7,8 @@ import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/debounceTime';
 
+import * as xml2js from 'xml2js'
+
 export const APP_INIT = 'APP_INIT';
 export const SERVERS_STATUS = 'SERVERS_STATUS';
 export const CLOUD_SERVERS = 'CLOUD_SERVERS';
@@ -19,7 +21,8 @@ export class AppdbAction extends Actions {
 
     constructor(private appStore:AppStore, private _http:Http, private jsonp:Jsonp) {
         super(appStore);
-        this.parseString = require('xml2js').parseString;
+        // this.parseString = require('xml2js').parseString;
+        this.parseString = xml2js.parseString;
     }
 
     public authenticateUser(i_user, i_pass, i_remember) {

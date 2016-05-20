@@ -4,7 +4,7 @@ import {
 } from 'angular2/core'
 import {List} from "immutable";
 import {StoreModel} from "../../models/StoreModel";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 @Component({
     selector: 'td[simpleGridDataChecks]',

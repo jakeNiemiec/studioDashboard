@@ -1,13 +1,12 @@
 // import 'zone.js/dist/zone.min.js';
-// import * as _ from 'underscore'
-// import Immutable = require('immutable');
 // import * as bootbox from 'bootbox';
 // import * as Immutable from 'immutable'
 // require('bootstrap');
 
-var platform = require('platform');
+//var platform = require('platform');
+import * as platform from 'platform';
 import 'jspm_packages/github/twbs/bootstrap@3.3.6';
-import Immutable = require('immutable');
+import * as Immutable from 'immutable'
 import 'zone.js/dist/zone';
 import 'zone.js/dist/long-stack-trace-zone'
 import "reflect-metadata";
@@ -66,6 +65,7 @@ import {stations} from "./stations/StationsReducer"
 import {AppdbAction} from "./appdb/AppdbAction";
 import {enableProdMode} from 'angular2/core';
 import {LogoCompany} from "./comps/logo/LogoCompany";
+
 
 export enum ServerMode {
     CLOUD,

@@ -20,7 +20,7 @@ import {FORM_DIRECTIVES, Control} from "angular2/common";
 import {ModalComponent} from "../../ng2-bs3-modal/components/modal";
 import {MODAL_DIRECTIVES} from "../../ng2-bs3-modal/ng2-bs3-modal";
 import {StationDetails} from "./StationDetails";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 type stationComponentMode = "map" | "grid";
 

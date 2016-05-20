@@ -12,8 +12,9 @@ import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/throw';
 import {SampleModel} from "../business/SampleModel";
 import {Lib} from "../Lib";
-const bootbox = require('bootbox');
-const _ = require('underscore');
+import * as bootbox from 'bootbox';
+import * as _ from 'lodash'
+import * as xml2js from 'xml2js'
 
 export const REQUEST_BUSINESS_USER = 'REQUEST_BUSINESS_USER';
 export const RECEIVE_BUSINESSES_SOURCES = 'RECEIVE_BUSINESSES_SOURCES';
@@ -38,7 +39,8 @@ export class BusinessAction extends Actions {
 
     constructor(private _http:Http, private appStore:AppStore) {
         super();
-        this.parseString = require('xml2js').parseString;
+        this.parseString = xml2js.parseString;
+        // this.parseString = require('xml2js').parseString;
         this.listenFetchBusinessUser();
     }
 

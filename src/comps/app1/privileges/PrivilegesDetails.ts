@@ -6,7 +6,7 @@ import {AppStore} from "angular2-redux-util/dist/index";
 import {PrivelegesTemplateModel} from "../../../reseller/PrivelegesTemplateModel";
 import {ResellerAction} from "../../../reseller/ResellerAction";
 import {Lib} from "../../../Lib";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 enum PrivModeEnum {ADD, DEL, UPD}
 

@@ -15,8 +15,8 @@ import {Lib} from "../../../Lib";
 import {AccountModel} from "../../../reseller/AccountModel";
 import {CreditService} from "../../../services/CreditService";
 import {InputEdit} from "../../../comps/inputedit/InputEdit";
-const _ = require('underscore');
-const bootbox = require('bootbox');
+import * as _ from 'lodash'
+import * as bootbox from 'bootbox';
 
 @Component({
     selector: 'accounts',

@@ -2,7 +2,7 @@ import {List} from 'immutable';
 import {Map} from 'immutable';
 import * as StationsAction from "./StationsAction";
 import {StationModel} from "./StationModel";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 export function stations(state:Map<string,any> = Map<string,any>(), action:any):Map<string, List<StationModel>> {
 

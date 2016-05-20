@@ -9,7 +9,7 @@ import {AuthService} from "../../../services/AuthService";
 import {appInjService} from "../../../services/AppInjService";
 import {PrivilegesDetails} from "./PrivilegesDetails";
 import {ResellerAction} from "../../../reseller/ResellerAction";
-const bootbox = require('bootbox');
+import * as bootbox from 'bootbox';
 
 @Component({
     selector: 'privileges',

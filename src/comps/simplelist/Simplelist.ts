@@ -3,7 +3,7 @@ import {COMMON_DIRECTIVES} from "angular2/src/common/common_directives";
 import {FilterPipe} from "../../pipes/FilterPipe";
 import {List} from 'immutable';
 import {SimplelistEditable} from "./SimplelistEditable";
-let _ = require('underscore');
+import * as _ from 'lodash'
 
 export interface  ISimpleListItem {
     item:any,
@@ -27,7 +27,7 @@ export class SimpleList {
     private m_iconSelected:string = '';
     private m_iconSelectedIndex:number = -1;
     private m_iconSelectedMode:boolean = false;
-    private m_metadata:Object = {};
+    private m_metadata:any = {};
 
     @Input()
     list:List<any>;
@@ -119,7 +119,7 @@ export class SimpleList {
         // this.m_editClickPending = true;
         this.m_iconSelectedIndex = index;
         setTimeout(()=> {
-            let match = _.find(self.m_metadata, (i) => i.index == index);
+            let match = _.find(self.m_metadata, (i:any) => i.index == index);
             // console.log(match.item.getBusinessId() + ' ' + match.item.getKey('name'));
             this.iconClicked.next({
                 item: match,

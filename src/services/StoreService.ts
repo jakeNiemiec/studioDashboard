@@ -9,7 +9,7 @@ import {CommBroker} from "./CommBroker";
 import {Consts} from "../Conts";
 import {StationModel} from "../stations/StationModel";
 import {Lib} from "../Lib";
-const _ = require('underscore');
+import * as _ from 'lodash'
 
 @Injectable()
 export class StoreService {

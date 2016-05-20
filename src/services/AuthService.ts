@@ -6,7 +6,7 @@ import {StoreService} from "./StoreService";
 import {AppdbAction} from "../appdb/AppdbAction";
 import {appInjService} from "./AppInjService";
 import Map = Immutable.Map;
-var bootbox = require('bootbox');
+import * as bootbox from 'bootbox';
 
 export enum FlagsAuth {
     AuthPass,
